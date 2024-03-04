@@ -1,38 +1,109 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  display: flex;
+  
+  justify-content: center;
+  height: 100vh;
+}
+
 .App {
   text-align: center;
+  width: 100%;
+  max-width: 470px;
+  border: 1px solid rgba(186, 186, 186, 0.362);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  background: linear-gradient(-225deg, #5d9fff 0%, #b8dcff 48%, #6bbbff 100%);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App h1 {
+  color: #343a40;
+  font-size: 2rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.input-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+.input-group input {
+  border-radius: 0.8rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.form-control {
+  border-radius: 5px;
+}
+button {
+  margin-left: 1rem;
+}
+.btn-primary {
+  border-radius: 5px;
+}
+
+.recent-searches {
+  background: #b8dcff;
+  margin-top: 20px;
+  flex-wrap: wrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+ 
 }
 
-.App-link {
-  color: #61dafb;
+.recent-search:hover {
+  background: linear-gradient(-225deg, #5d9fff 0%, #b8dcff 48%, #6bbbff 100%);
+  cursor: pointer;
+}
+.weather-result {
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 5px;
+  background: linear-gradient(-225deg, #5d9fff 0%, #b8dcff 48%, #6bbbff 100%);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.weather-result h2 {
+  color: #343a40;
+  font-size: 1.8rem;
+}
+
+.weather-result p {
+  margin: 10px 0;
+}
+.weather-icon {
+  width: 28%;
+}
+.details {
+  padding: 0.5rem;
+  margin-top: 1rem;
+}
+.col {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: left;
+}
+.col img {
+  width: 15%;
+}
+.form-check-inline {
+  margin-top: 10px;
+}
+
+.form-check-label {
+  margin-left: 5px;
+  color: #343a40;
+}
+
+@media only screen and (max-width: 600px) {
+  .App {
+    width: 100%;
+    padding: 10px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .weather-result {
+    padding: 10px;
+  }
+
+  .recent-searches {
+    margin-top: 10px;
   }
 }
